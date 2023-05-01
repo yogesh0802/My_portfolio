@@ -1,0 +1,44 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
+
+  deploy:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - attach_workspace:
+          at: .
+      - run: |
+          git config --global user.email "yogeshmborole0802@gmail.com"
+          git config --global user.name "yogesh0802"
+          git clone --branch=gh-pages --depth=1 git@github.com:yogesh0802/My_portfolio.git deploy
+          rm -rf deploy/*
+          cp -r public/* deploy/
+          cd deploy
+          git add -A
+          git commit -m "Deploy static site"
+          git push origin gh-pages
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - main
