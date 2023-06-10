@@ -224,10 +224,13 @@ section .title::after {
     margin: 10px 80px;
     margin-top: 20px;
 } */
+
 .about .about-content .left img {
   height: 450px;
   width: 450px;
-  border-radius: 10%;
+  /* border-radius: 10%; */
+  border-radius: 26px 172px/169px;
+  /* border-radius: 50% 20% / 10% 40%; */
 }
 
 .about .about-content .right {
