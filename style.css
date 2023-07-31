@@ -778,7 +778,11 @@ section .title::after {
     padding-top: 80px;
     transition: all 0.3s ease;
   }
-
+  /* vidoe */
+  .bg-video {
+    width: 947px; /* Set the width to 100% for screens up to 947px */
+    height: 100%; /* Reset the height to maintain the video's aspect ratio */
+  }
   .navbar .menu.active {
     left: 0;
   }
@@ -995,5 +999,9 @@ section .title::after {
 
   .edu .edu-content .card .card-body li {
     font-size: 13px;
+  }
+  .bg-video {
+    width: 500px; /* Set the width to 100% for screens up to 947px */
+    height: 100%; /* Reset the height to maintain the video's aspect ratio */
   }
 }
