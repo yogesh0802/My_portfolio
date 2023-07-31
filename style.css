@@ -738,7 +738,6 @@ section .title::after {
   .max-width {
     padding: 0 50px;
   }
-
   .edu .edu-content {
     margin-left: auto;
     margin-right: auto;
@@ -756,7 +755,10 @@ section .title::after {
     display: block;
     z-index: 999;
   }
-
+  .menu-btn i {
+    content: "\f00d";
+    color: #111;
+  }
   /* for cross sign after opening the menu */
   .menu-btn i.active:before {
     content: "\f00d";
@@ -779,10 +781,10 @@ section .title::after {
     transition: all 0.3s ease;
   }
   /* vidoe */
-  .bg-video {
-    width: 947px; /* Set the width to 100% for screens up to 947px */
-    height: 100%; /* Reset the height to maintain the video's aspect ratio */
-  }
+  /* .bg-video {
+    width: 928px; 
+    height: 100%; 
+  } */
   .navbar .menu.active {
     left: 0;
   }
@@ -901,7 +903,10 @@ section .title::after {
   .max-width {
     padding: 0 23px;
   }
-
+  /* .bg-video {
+    width: 690px; 
+    height: 100%; 
+  } */
   .home .home-content .text-2 {
     font-size: 45px;
   }
@@ -999,9 +1004,5 @@ section .title::after {
 
   .edu .edu-content .card .card-body li {
     font-size: 13px;
-  }
-  .bg-video {
-    width: 500px; /* Set the width to 100% for screens up to 947px */
-    height: 100%; /* Reset the height to maintain the video's aspect ratio */
   }
 }
